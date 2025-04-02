@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoFinalWeb.Models;
 
-namespace ProjetoFinalWeb.Data;
+namespace ProjetoFinalWeb.Data
 {
     public class ApplicationDbContext : DbContext
     {
