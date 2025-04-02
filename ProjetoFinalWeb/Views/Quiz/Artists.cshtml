@@ -1,0 +1,27 @@
+﻿@model List<ProjetoFinalWeb.Models.Artist>
+
+@{
+    ViewData["Title"] = "Artistas K-Pop";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Artistas K-Pop</h1>
+    
+    <div class="row">
+        @foreach (var artist in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="@artist.ImageUrl" class="card-img-top" alt="@artist.Name">
+                    <div class="card-body">
+                        <h5 class="card-title">@artist.Name</h5>
+                        <p class="card-text">@artist.Description</p>
+                        <a asp-action="ArtistDetails" asp-route-id="@artist.Id" class="btn btn-primary">
+                            Ver Membros
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
