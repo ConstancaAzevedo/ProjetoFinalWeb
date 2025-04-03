@@ -1,19 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "Criar Quiz";
+    ViewData["Title"] = "Create Quiz";
 }
 
 <div class="container">
-    <h2>Criando Quiz sobre: <span class="text-primary">@ViewBag.Category</span></h2>
+    <h2>Create Quiz about:<span class="text-primary">@ViewBag.Category</span></h2>
     
     <!-- Seu formulário de criação de quiz aqui -->
     <form asp-action="Create">
         <div class="form-group">
-            <label>Título do Quiz</label>
+            <label>Quiz's title</label>
             <input type="text" class="form-control" name="Title" required>
         </div>
         
         <!-- Adicione mais campos conforme necessário -->
         
-        <button type="submit" class="btn btn-primary mt-3">Criar Quiz</button>
+        <button type="submit" class="btn btn-primary mt-3">Create Quiz</button>
     </form>
 </div>
