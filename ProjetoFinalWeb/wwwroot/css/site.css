@@ -20,3 +20,145 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+/* Estilos da sidebar */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  left: -280px;
+  top: 0;
+  z-index: 1050;
+  transition: all 0.3s;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  height: 60px;
+}
+
+/* Overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  transition: margin-left 0.3s;
+}
+
+/* Itens do menu */
+.nav-link {
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ajustes para navbar */
+.navbar {
+  z-index: 1030;
+}
+
+/* Responsividade */
+@media (min-width: 992px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    left: -280px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+}
+
+/* Novo estilo para o hover do logo - TEXTO ABAIXO */
+.logo-hover {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px; /* Espaço para o texto aparecer */
+}
+
+.logo-hover img {
+  transition: transform 0.3s ease;
+}
+
+.logo-text {
+  position: absolute;
+  top: 100%; /* Posiciona abaixo da imagem */
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+  color: lightblue;
+  white-space: nowrap;
+  transform: translateY(-5px);
+}
+
+.logo-hover:hover .logo-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeito opcional: pequeno zoom no logo ao passar mouse */
+.logo-hover:hover img {
+  transform: scale(1.20);
+}
+
+/* Ajuste para mobile */
+@media (max-width: 576px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+/* Estilo para as categorias de quiz */
+.category-card {
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Estilo para o título da categoria */
+.category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6e48aa;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
