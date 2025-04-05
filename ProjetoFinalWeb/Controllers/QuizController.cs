@@ -62,7 +62,7 @@ namespace ProjetoFinalWeb.Controllers
         public IActionResult ArtistDetails(int id)
         {
             var artist = _context.Artists
-                .Include(a => a.Members)
+                .Include(a => a.Members)  
                 .FirstOrDefault(a => a.Id == id);
 
             if (artist == null)
