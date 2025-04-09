@@ -102,34 +102,18 @@ body {
   }
 }
 
-/* Novo estilo para o hover do logo - TEXTO ABAIXO */
+/* Novo estilo para o hover do logo*/
 .logo-hover {
   position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 5px; /* Espaço para o texto aparecer */
 }
 
 .logo-hover img {
   transition: transform 0.3s ease;
 }
 
-.logo-text {
-  position: absolute;
-  top: 100%; /* Posiciona abaixo da imagem */
-  opacity: 0;
-  transition: all 0.3s ease;
-  font-size: 0.75rem;
-  color: lightblue;
-  white-space: nowrap;
-  transform: translateY(-5px);
-}
-
-.logo-hover:hover .logo-text {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Efeito opcional: pequeno zoom no logo ao passar mouse */
 .logo-hover:hover img {
