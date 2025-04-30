@@ -1,5 +1,7 @@
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -12,119 +14,14 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin-bottom: 60px;
 }
 
 
-/* Estilos da sidebar */
-.sidebar {
-  width: 280px;
-  height: 100vh;
-  position: fixed;
-  left: -280px;
-  top: 0;
-  z-index: 1050;
-  transition: all 0.3s;
-  overflow-y: auto;
-}
-
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar-header {
-  height: 60px;
-}
-
-/* Overlay */
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1040;
-}
-
-.overlay.active {
-  display: block;
-}
-
 /* Conteúdo Principal */
 .main-content {
   transition: margin-left 0.3s;
-}
-
-/* Itens do menu */
-.nav-link {
-  border-radius: 5px;
-  padding: 10px 15px;
-  transition: all 0.2s;
-}
-
-.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-link.active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Ajustes para navbar */
-.navbar {
-  z-index: 1030;
-}
-
-/* Responsividade */
-@media (min-width: 992px) {
-  .main-content {
-    margin-left: 0;
-  }
-
-  .sidebar {
-    left: -280px;
-  }
-
-  .sidebar.active {
-    left: 0;
-  }
-
-  .overlay.active {
-    display: block;
-  }
-}
-
-/* Novo estilo para o hover do logo*/
-.logo-hover {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo-hover img {
-  transition: transform 0.3s ease;
-}
-
-
-/* Efeito opcional: pequeno zoom no logo ao passar mouse */
-.logo-hover:hover img {
-  transform: scale(1.20);
-}
-
-/* Ajuste para mobile */
-@media (max-width: 576px) {
-  .logo-text {
-    display: none;
-  }
 }
 
 /* Estilo para as categorias de quiz */
